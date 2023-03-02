@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movies</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/cosmo/bootstrap.min.css" integrity="sha256-iMtue7kH6spfqTbfU9XGcwtBF8bgiOnVTErTuh7LJr8=" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../static/img/favicon.png">
+    </head>
+<body>
+<!-- Header & Navbar -->
+
+ 
+
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Movies</a>
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <!-- navigation -->
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/runtime-by-country">Runtime Trends by Country </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/runtime-by-language">Runtime Trends by Language</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/imdb-by-country">Imdb Ratings Trends By Country</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/imdb-by-language">Imdb Ratings Trend By Language</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="/api/movie/runtime">Runtime API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="/api/movie/rating">Rating API</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    
+    <div class="container-fluid">
+      <!-- template here -->
+      {% block content %}
+
+      {% endblock %}
+      
+    </div>
+    
+    <!-- Import Bootstrap, D3, Plotly-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="static/js/runtime-by-country.js"></script>
+    <script src="static/js/runtime-by-language.js"></script>
+    <script src="static/js/imdb-by-country.js"></script>
+    <script src="static/js/imdb-by-language.js"></script>
+
+    </body>
+
+
+
+
